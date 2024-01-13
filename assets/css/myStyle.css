@@ -510,9 +510,18 @@ h6 {
   text-align: center;
 }
 
-#hero h1, .mySection h1 {
+#hero h1  {
   margin: 0;
   font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  font-family: "Corbel Light", sans-serif;
+}
+
+.mySection h1{
+  margin: 0;
+  font-size: 48px;
   font-weight: 700;
   line-height: 64px;
   color: #fff;
@@ -574,8 +583,13 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1, .mySection h1 {
+  #hero h1 {
     font-size: 28px;
+    line-height: 36px;
+  }
+
+  .mySection h1 {
+    font-size: 24px;
     line-height: 36px;
   }
 
