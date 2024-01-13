@@ -11,6 +11,15 @@
   --text-light: #fff;
 }
 
+@font-face {
+  font-family: 'Corbel Light';
+  src: url('/assets/fonts/corbel-light.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Corbel Light', sans-serif;
+}
+
 
 .text-pri-light {
   color: var(--primary-color-light);
@@ -83,8 +92,9 @@ h2 > span {
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
   color: var(--text-light);
+  letter-spacing: 2px;
 }
 
 a {
@@ -103,7 +113,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -506,7 +516,7 @@ h6 {
   font-weight: 700;
   line-height: 64px;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
 }
 
 
@@ -596,7 +606,7 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
 }
 
 .section-title h2::after {
@@ -614,7 +624,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
   color: #151515;
 }
 
@@ -624,7 +634,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 28px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
 }
 
 .about .content ul {
@@ -797,7 +807,7 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1045,7 +1055,7 @@ section {
 .counts .content .count-box p {
   padding: 15px 0 0 0;
   margin: 0 0 0 50px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
   font-size: 14px;
   color: #3b3b3b;
 }
@@ -1056,7 +1066,7 @@ section {
   margin-top: 20px;
   color: #3b3b3b;
   font-size: 15px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
   transition: ease-in-out 0.3s;
 }
 
@@ -1506,7 +1516,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Corbel Light", sans-serif;
   color: #fff;
 }
 
