@@ -538,6 +538,7 @@ h6 {
   color: rgba(255, 255, 255, 0.9);
   margin: 10px 0 0 0;
   font-size: 24px;
+  font-weight: lighter;
 }
 
 #hero .icon-box {
