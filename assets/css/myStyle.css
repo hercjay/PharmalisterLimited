@@ -94,7 +94,7 @@ h2 > span {
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--text-color);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 a {
@@ -220,6 +220,7 @@ h6 {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 2px;
+  filter: drop-shadow(0px 0px 5px rgba(235, 235, 235, 0.4));
   /* text-transform: uppercase; */
 }
 
