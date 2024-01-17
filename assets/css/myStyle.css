@@ -5,15 +5,18 @@
   --primary-color: #EF9C01;
   --text-dark: #151515;
   --text-dark-light: #777777;
-  --bg:  #00020e;
-  --bg-dark:  #070107;
   --card-color: rgba(255, 208, 1, 0.06);
-  --text-color: #fff;
 }
 
 @font-face {
   font-family: 'Corbel Light';
   src: url('/assets/fonts/corbel-light.ttf') format('truetype');
+}
+
+.themeToggleLabel {
+  margin-left: 2px;
+  color: white !important;
+  /* color: var(--text-color) !important; */
 }
 
 body {
@@ -62,7 +65,7 @@ h2 > span {
 }
 
 .myCard > h2 {
-  color: var(--primary-color-light) !important
+  color: var(--primary-color-light) !important;
 }
 
 
@@ -525,7 +528,7 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
-  color: #fff;
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -536,7 +539,7 @@ h6 {
 }
 
 #hero h2, .mySection h2 {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-color);
   margin: 10px 0 0 0;
   font-size: 24px;
   font-weight: lighter;
@@ -566,7 +569,7 @@ h6 {
 }
 
 #hero .icon-box h3 a {
-  color: #fff;
+  color: var(--text-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -813,13 +816,13 @@ section {
 }
 
 .cta h3 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 28px;
   font-weight: 700;
 }
 
 .cta p {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .cta .cta-btn {

@@ -28,6 +28,8 @@
   <!-- My CSS File -->
   <link href="assets/css/myStyle.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/css/dark.css" id="theme-stylesheet">
+
 </head>
 
 <body>
@@ -47,10 +49,16 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about-us">About</a></li>
           <li><a class="nav-link scrollto" href="#our-services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#contact-us">Contact Us</a></li>
-          <li><a class="nav-link scrollto" href="#our-team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact-us">Contact</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#our-team">Team</a></li> -->
           <li><a class="nav-link scrollto" href="#privacy-policy">Privacy Policy</a></li>
-          <li><a class="nav-link scrollto" href="#terms-and-conditions">Terms & Conditions</a></li>
+          <li><a class="nav-link scrollto" href="#terms-and-conditions">Terms</a></li>
+          <li>
+            <a id="themeToggleLabel">
+              <i id="themeToggle" class="text-light themeToggle bi bi-sun-fill"></i> 
+              <span id="themeToggleModeText" class="text-light" style="cursor: pointer"> Light</span>
+            </a>
+          </li>
           
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -86,7 +94,7 @@
       <div class="row justify-content-center" >
         <div class="col-xl-6 col-lg-8">
           <h1 data-aos="fade-up" data-aos-delay="350">Welcome to Pharmalister<span>!</span></h1>
-          <h2 data-aos="fade-in" data-aos-delay="1300">Your Gateway to Better Health...</h2>
+          <h2 data-aos="fade-in" data-aos-delay="1300" class="text-white">Your Gateway to Better Health...</h2>
           <br>
           <svg data-aos="fade-in" data-aos-delay="1300" class="upDownAnimate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="rgba(255,184,51,1)"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg>
         </div>
@@ -582,6 +590,7 @@
 
   <!-- JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/themeToggle.js"></script>
 
 </body>
 
