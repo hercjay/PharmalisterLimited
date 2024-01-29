@@ -19,6 +19,10 @@
   /* color: var(--text-color) !important; */
 }
 
+.bg-header {
+  background-color: var(--bg-header) !important;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -65,6 +69,13 @@ h2 > span {
 }
 
 .myCard > h2 {
+  color: var(--primary-color-light) !important;
+}
+
+#navbar > ul > li > a {
+  color: var(--text-color) !important;
+}
+#navbar > ul > li > a:hover {
   color: var(--primary-color-light) !important;
 }
 
