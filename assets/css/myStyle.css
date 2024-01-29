@@ -61,6 +61,10 @@ h2 > span {
   color: var(--primary-color-light);
 }
 
+.text-color {
+  color: var(--text-color) !important;
+}
+
 .myCard {
   padding: 10px;
   background: var(--card-color);
