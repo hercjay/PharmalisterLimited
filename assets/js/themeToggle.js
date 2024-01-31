@@ -21,13 +21,13 @@ function setThemeMode() {
     let themeMode = localStorage.getItem('pharmalister-themeMode') || 'light';
 
     if (themeMode === 'dark') {
-        themeStylesheet.href = `${basePath}/assets/css/dark.css`;
+        themeStylesheet.href = `assets/css/dark.css`;
         themeToggleLabel.style.color = '#555';
-        // logoImage.src = `${basePath}/assets/img/logos/Full_Logo_Grey.png`;
+        // logoImage.src = `/assets/img/logos/Full_Logo_Grey.png`;
     } else {
-        themeStylesheet.href = `${basePath}/assets/css/light.css`;
+        themeStylesheet.href = `assets/css/light.css`;
         themeToggleLabel.style.color = '#ffb833';
-        // logoImage.src = `${basePath}/assets/img/logos/Full_Logo.png`;
+        // logoImage.src = `/assets/img/logos/Full_Logo.png`;
     }
 }
 
@@ -38,14 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     themeToggleLabel.addEventListener('click', function () {
         if (themeStylesheet.href.endsWith('assets/css/light.css')) {
-            themeStylesheet.href = `${basePath}/assets/css/dark.css`;
-            // logoImage.src = `${basePath}/assets/img/logos/Full_Logo_Grey.png`;
+            themeStylesheet.href = `assets/css/dark.css`;
+            // logoImage.src = `/assets/img/logos/Full_Logo_Grey.png`;
             // themeToggleModeText.textContent = 'Light';
             themeToggleLabel.style.color = '#555';
             localStorage.setItem('pharmalister-themeMode', 'dark');
         } else {
-            themeStylesheet.href = `${basePath}/assets/css/light.css`;
-            // logoImage.src = `${basePath}/assets/img/logos/Full_Logo.png`;
+            themeStylesheet.href = `assets/css/light.css`;
+            // logoImage.src = `/assets/img/logos/Full_Logo.png`;
             // themeToggleModeText.textContent = 'Dark';
             //themeToggle.classList.remove('text-light');
             //themeToggleModeText.classList.remove('text-light');
