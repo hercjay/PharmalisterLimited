@@ -28,6 +28,7 @@ function setThemeMode() {
         themeStylesheet.href = `assets/css/light.css`;
         themeToggleLabel.style.color = '#ffb833';
         // logoImage.src = `/assets/img/logos/Full_Logo.png`;
+        // logoImage.src = `/assets/img/logos/Full_Logo.png`;
     }
 }
 
