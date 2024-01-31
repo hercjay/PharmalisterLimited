@@ -1,5 +1,6 @@
 
-const basePath =  window.location.pathname.replace('/index.html', '');
+// const basePath =  window.location.pathname.replace('/index.html', '');
+const basePath = '';
 const logoImage = document.getElementById('logo-image');
 const themeToggleLabel = document.getElementById('themeToggleLabel');
 const themeStylesheet = document.getElementById('theme-stylesheet');
