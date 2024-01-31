@@ -1,6 +1,5 @@
 
 const basePath =  window.location.pathname.replace('/index.html', '');
-alert(`${basePath}/assets/css/dark.css`);
 const logoImage = document.getElementById('logo-image');
 const themeToggleLabel = document.getElementById('themeToggleLabel');
 const themeStylesheet = document.getElementById('theme-stylesheet');
@@ -22,10 +21,12 @@ function setThemeMode() {
 
     if (themeMode === 'dark') {
         themeStylesheet.href = `${basePath}/assets/css/dark.css`;
-        logoImage.src = `${basePath}/assets/img/logos/Full_Logo_Grey.png`;
+        themeToggleLabel.style.color = '#555';
+        // logoImage.src = `${basePath}/assets/img/logos/Full_Logo_Grey.png`;
     } else {
         themeStylesheet.href = `${basePath}/assets/css/light.css`;
-        logoImage.src = `${basePath}/assets/img/logos/Full_Logo.png`;
+        themeToggleLabel.style.color = '#ffb833';
+        // logoImage.src = `${basePath}/assets/img/logos/Full_Logo.png`;
     }
 }
 
@@ -37,17 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
     themeToggleLabel.addEventListener('click', function () {
         if (themeStylesheet.href.endsWith('assets/css/light.css')) {
             themeStylesheet.href = `${basePath}/assets/css/dark.css`;
-            logoImage.src = `${basePath}/assets/img/logos/Full_Logo_Grey.png`;
+            // logoImage.src = `${basePath}/assets/img/logos/Full_Logo_Grey.png`;
             // themeToggleModeText.textContent = 'Light';
-            //themeToggleLabel.style.color = '#fff';
+            themeToggleLabel.style.color = '#555';
             localStorage.setItem('pharmalister-themeMode', 'dark');
         } else {
             themeStylesheet.href = `${basePath}/assets/css/light.css`;
-            logoImage.src = `${basePath}/assets/img/logos/Full_Logo.png`;
+            // logoImage.src = `${basePath}/assets/img/logos/Full_Logo.png`;
             // themeToggleModeText.textContent = 'Dark';
             //themeToggle.classList.remove('text-light');
             //themeToggleModeText.classList.remove('text-light');
-            //themeToggleLabel.style.color = '#ffb833';
+            themeToggleLabel.style.color = '#ffb833';
             localStorage.setItem('pharmalister-themeMode', 'light');
         }
     });
