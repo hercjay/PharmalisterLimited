@@ -118,11 +118,37 @@ body {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  
+}
+
+a > h2 {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+  border: 1px solid var(--primary-color);
+  padding: 5px;
+  width: fit-content;
+  border-radius: 5px;
+  text-align: center;
+}
+
+a > h2:hover{
+  background-color: var(--primary-color);
+  color: white !important;
 }
 
 a:hover {
   color: var(--primary-color-light);
   text-decoration: none;
+}
+
+.myBtn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.myBtn:hover {
+  background-color: var(--primary-color-light);
+  color: black;
 }
 
 h1,
