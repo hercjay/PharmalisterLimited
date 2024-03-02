@@ -53,30 +53,7 @@
             <!-- <li><a class="nav-link scrollto" href="#our-team">Team</a></li> -->
             <li><a class="nav-link scrollto text-dark" href="privacy-policy.html">Privacy Policy</a></li>
             <li><a class="nav-link scrollto text-dark" href="terms-and-conditions.html">Terms</a></li>
-          <!-- <li>
-            <a id="themeToggleLabel">
-              <i id="themeToggle" class="text-light themeToggle bi bi-sun-fill"></i> 
-              <span id="themeToggleModeText" class="text-light" style="cursor: pointer"> Light</span>
-            </a>
-          </li> -->
           
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle text-dark"></i>
@@ -101,12 +78,58 @@
 
     <br> <br> <br>
 
+    <section id="contact-us-form" class="bg-dark d-flex align-items-center justify-content-center mySection">
+
+              
+      <div class="row" data-aos="fade-up" data-aos-delay="350">
+
+        <form style="max-width: 500px;" class="mx-auto" id="get-started-form">
+            <h1 data-aos="fade-up" data-aos-delay="350">Contact Us<span>.</span></h1>
+            <br>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" required placeholder="Enter your email address">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category:</label>
+                <select class="form-select" id="category">
+                    <option value="Marketing">Marketing</option>
+                    <option value="Regulatory Affairs">Regulatory Affairs</option>
+                    <option value="Market Access">Market Access</option>
+                    <option value="Warehousing & Distribution">Warehousing & Distribution</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label>
+                <textarea required class="form-control" id="description" rows="5" placeholder="Enter a brief description of the required services"></textarea>
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-secondary">Cancel</button>
+                <button  id="submitBtn" type="submit" class="btn myBtn">Save</button>
+            </div>
+        </form>
+
+    </div>
+
+    </section>
+
       <!-- ======= Contact Us Section ======= -->
       <section id="contact-us" class="bg-dark d-flex align-items-center justify-content-center mySection">
+
+        
+        
         <div class="container">
           <div class="row justify-content-center" >
             <div class="col-12">
-              <h1 data-aos="fade-up" data-aos-delay="350">Contact Us<span>.</span></h1>
+              <!-- <h1 data-aos="fade-up" data-aos-delay="350">Contact Us<span>.</span></h1> -->
               <br>
 
               <div class="row" data-aos="fade-up" data-aos-delay="350">
@@ -176,37 +199,6 @@
             </ul>
           </div>
 
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div> -->
-
-          <!-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div> -->
-
         </div>
       </div>
     </div>
@@ -235,6 +227,12 @@
   <!-- JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/themeToggle.js"></script>
+
+      <!-- Import Firebase and Firestore -->
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  
+    <script src="firebase.js"></script>
 
 </body>
 
