@@ -27,6 +27,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.logo img {
+  margin-top: 10px;
+  margin-left: 50px;
+  transform: scale(1.8);
+}
+
 
 .text-pri-light {
   color: var(--primary-color-light);
