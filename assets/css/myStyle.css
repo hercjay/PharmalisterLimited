@@ -28,9 +28,11 @@ body {
 }
 
 .logo img {
-  margin-top: 10px;
+  margin-top: 25px;
+  margin-bottom: 0px !important;
   margin-left: 50px;
-  transform: scale(1.8);
+  transform: scale(1.6);
+  border: 1px solid red;
 }
 
 
