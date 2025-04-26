@@ -5,6 +5,7 @@
   --primary-color: #EF9C01;
   --text-dark: #151515;
   --text-dark-light: #777777;
+  --border-color: #e6e6e6;
   --card-color: rgba(255, 208, 1, 0.06);
 }
 
@@ -88,6 +89,105 @@ h2 > span {
 }
 #navbar > ul > li > a:hover {
   /* color: var(--primary-color-light) !important; */
+}
+
+.nav-link:hover {
+  color: var(--primary-color-light) !important;
+  border-bottom: 1px solid var(--primary-color-light) !important;
+  width: fit-content;
+}
+
+
+.outlineBtn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+  transition: all 0.3s linear;
+}
+
+.outlineBtn:hover {
+  background: var(--primary-color-light);
+  color: white;
+}
+
+.primaryBtn {
+  background: var(--primary-color-light);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+  transition: all 0.3s linear;
+}
+
+.primaryBtn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+
+.mySection .container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+}
+
+.mySection .myImage {
+  border-radius: 10px;
+  border: 5px solid white;
+  box-shadow: #e6e6e6 0px 0px 10px 8px;
+  transform: rotate(-2deg);
+}
+
+.mySection .title {
+  border-bottom:  1px solid rgb(204, 204, 204);
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+
+.myCard {
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.myCard:hover {
+  transform: rotate(1deg);
+  box-shadow: rgba(56, 56, 56, 0.1) 0px 0px 10px 0px;
+
+}
+
+.myCard .icon {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.myCard .topic {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.myCard .content {
+  font-size: 16px;
+  color: var(--text-dark-light);
+  padding: 0;
+  margin-top: 8px;
 }
 
 
@@ -439,6 +539,7 @@ h6 {
   transition: 0.5s;
 }
 
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -541,7 +642,7 @@ h6 {
   width: 100%;
   min-height: 100vh;
   /* background: url("../img/hero-back2.jpg") top center; */
-  background: url('../img/bggg.jpg') top center; /*../img/apothecary.jpg */
+  background: url('../img/bgg1.jpg') top center; /*../img/apothecary.jpg */
   background-size: cover;
   position: relative;
 }
@@ -579,6 +680,18 @@ h6 {
   color: var(--text-color);
   font-family: "Open Sans", sans-serif;
 }
+
+
+.mySection .subheading {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+}
+
+
 
 
 
@@ -637,11 +750,16 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 36px;
   }
 
   .mySection h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .mySection .subheading {
     font-size: 24px;
     line-height: 36px;
   }

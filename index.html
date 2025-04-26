@@ -24,6 +24,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- My CSS File -->
   <link href="assets/css/myStyle.css" rel="stylesheet">
@@ -82,11 +83,11 @@
         <i class="bi bi-list mobile-nav-toggle text-dark"></i>
       </nav><!-- .navbar -->
 
-      <a id="themeToggleLabel" class="px-4">
+      <!-- <a id="themeToggleLabel" class="px-4">
         <i id="themeToggle" class="themeToggle bi bi-sun-fill"></i> 
         <i id="themeToggleModeText"></i>
-        <!-- <span id="themeToggleModeText" class="text-light" style="cursor: pointer"> Light</span> -->
-      </a>
+        <span id="themeToggleModeText" class="text-light" style="cursor: pointer"> Light</span>
+      </a> -->
 
       <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
 
@@ -94,16 +95,30 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
+  <section id="hero" data-aos="fade-in" data-aos-duration="1500" class="d-flex align-items-center justify-content-center">
+    <div class="w-100 h-100" id="hero-particles" style="opacity: 0.5;"></div>
     <div class="container">
-
       <div class="row justify-content-center" >
         <div class="col-xl-6 col-lg-8">
-          <h1 data-aos="fade-up" data-aos-delay="350">Welcome to Pharmalister<span>!</span></h1>
+            <h1 data-aos="fade-up" data-aos-delay="350" data-aos-duration="1500">Welcome to Pharmalister<span>!</span></h1>
           <h2 data-aos="fade-in" data-aos-delay="1300" class="text-white">Your Gateway to Better Health...</h2>
           <br>
           <svg data-aos="fade-in" data-aos-delay="1300" class="upDownAnimate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="rgba(255,184,51,1)"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg>
+          <br>
+          <br>
+          <br>
         </div>
+
+        <div class="row d-flex justify-content-center flex-wrap">
+          <div class="col-auto" data-aos="fade-in" data-aos-delay="1600">
+            <a class="primaryBtn" href="/get-started.html">Get Started</a>
+          </div>
+          <div class="col-auto m-5 m-md-0" data-aos="fade-in" data-aos-delay="1800">
+            <a class="outlineBtn" href="/services.html">Explore Services</a>
+          </div>
+          <br>
+        </div>
+
       </div>
     </div>
   </section><!-- End Hero -->
@@ -116,33 +131,73 @@
 
     <!-- ======= About Us Section ======= -->
     <section id="about-us" class="bg-dark d-flex align-items-center justify-content-center mySection">
-      <div class="container">
-        <div class="row justify-content-center" >
-          <div class="col-12">
-            <h1 data-aos="fade-up" data-aos-delay="350">Hello there<span>!</span></h1>
-            <br>
+      <div class="container"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350">
+        <h1 class="text-center title" data-aos="fade-up">About Pharmalister<span>!</span></h1>
+        <br/>
+        <div class="d-flex row justify-content-center" >
+          <div class="col-12 col-md-5 mb-4" data-aos="fade-right" data-aos-delay="350" data-aos-duration="1000">
+            <img class="img-fluid myImage" src="/assets/img/health-team.jpeg" alt="">
+          </div>
+          <div class="col-12 col-md-7 ">
             <h2 data-aos="fade-in" data-aos-delay="500">We are Pharmalister, and we are all about making healthcare better, simpler, and more accessible.</h2> 
-            <h2 data-aos="fade-in" data-aos-delay="500">Founded in 2021, we are a team of healthcare enthusiasts with over 45 years of combined experience in healthcare.</h2> 
+            <h2 data-aos="fade-in" data-aos-delay="500">Founded in 2021, we are a team of healthcare enthusiasts with over <strong>45 years</strong> of combined experience in healthcare.</h2> 
           </div>
         </div>
       </div>
     </section>
 
-    <section id="" class="bg-darker d-flex align-items-center justify-content-center mySection">
-      <div class="container">
-        <div class="row justify-content-center" >
-          <div class="col-12">
-            <h1 data-aos="fade-up" data-aos-delay="350">What Drives Us<span>?</span></h1>
-            <br>
+
+
+    <!-- What drives us? START -->
+    <section id="what-drives-us" class="bg-dark d-flex align-items-center justify-content-center mySection">
+      <div class="container"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350">
+        <h1 class="text-center title" data-aos="fade-up">What Drives Us<span>?</span></h1>
+        <br/>
+        <div class="d-flex row justify-content-center" >
+          <div class="col-12 col-md-5 mb-4" data-aos="fade-right" data-aos-delay="350" data-aos-duration="1000">
+            <img class="img-fluid myImage" src="/assets/img/remote-health.jpeg" alt="">
+          </div>
+          <div class="col-12 col-md-7 ">
             <h2 data-aos="fade-in" data-aos-delay="500">Our mission is simple: we want everyone to have easy access to affordable healthcare, no matter where they are. We are here to break down barriers and bring healthcare into your daily life.</h2> 
-            <br>
-            <h2 data-aos="fade-in" data-aos-delay="500"><span>Mission</span>: We are committed to making healthcare accessible, affordable, and seamless for everyone, regardless of their location.</h2> 
-            <br>
-            <h2 data-aos="fade-in" data-aos-delay="500"><span>Vision</span>: Envision a world where accessing healthcare is as easy as ordering your favourite treat online. That is the future we are working tirelessly to create.</h2> 
+          </div>
+        </div>
+        <br/>
+        <div class="d-flex row justify-content-center" >
+          <!-- Mission -->
+          <div class="col-12 col-md-6 mb-4" data-aos="flip-right" data-aos-delay="700" data-aos-duration="1000">
+            <div class="myCard gap-3 p-4">
+              <div class="row align-items-center">
+                <div class="col-auto m-0 p-0">
+                  <img class="icon" src="/assets/img/svgs/rocket.svg" alt="">
+                </div>
+                <p class="topic col">Mission</p>
+              </div>
+              <p class="content">
+                We are committed to making healthcare accessible, affordable, and seamless for everyone, regardless of their location.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vision -->
+          <div class="col-12 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="900" data-aos-duration="1000">
+            <div class="myCard gap-3 p-4">
+              <div class="row align-items-center">
+                <div class="col-auto m-0 p-0">
+                  <img class="icon" src="/assets/img/svgs/world.svg" alt="">
+                </div>
+                <p class="topic col">Vision</p>
+              </div>
+              <p class="content">
+                Envision a world where accessing healthcare is as easy as ordering your favourite treat online. That is the future we are working tirelessly to create.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- What drives us? END -->
+
+
 
     <section id="" class="bg-darker d-flex align-items-center justify-content-center mySection">
       <div class="container">
@@ -384,7 +439,7 @@
         &copy; Copyright <strong><span>Pharmalister</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Image by <a href="https://www.freepik.com/free-photo/medical-banner-with-doctor-wearing-coat_30555930.htm#&position=7&from_view=search&track=ais&uuid=d6b39295-b0da-47f9-ac29-36bdef11a9eb">Freepik</a>
+        Powered by <a href="https://www.linkedin.com/in/michael-anokwulu">Hercjay Studios</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -400,9 +455,11 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  
 
   <!-- JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/particles.js"></script>
   <script src="assets/js/themeToggle.js"></script>
 
 </body>
