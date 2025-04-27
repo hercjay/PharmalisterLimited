@@ -152,18 +152,19 @@ h2 > span {
   margin-bottom: 30px;
 }
 
-
 .myCard {
-  padding: 10px;
   background: white;
   border: 1px solid var(--border-color);
   border-radius: 5px;
   transition: all 0.3s linear;
   cursor: pointer;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .myCard:hover {
-  transform: rotate(1deg);
+  transform: rotate(0.5deg);
   box-shadow: rgba(56, 56, 56, 0.1) 0px 0px 10px 0px;
 
 }
@@ -187,7 +188,21 @@ h2 > span {
   font-size: 16px;
   color: var(--text-dark-light);
   padding: 0;
-  margin-top: 8px;
+  margin-top: 16px;
+}
+
+.colorLine {
+  background: linear-gradient(to right, var(--primary-color-light), var(--primary-color));
+  height: 1px;
+  width: 30%;
+  margin: 5px auto;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+
+.myCard:hover .colorLine {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-color-light));
+  width: 80%;
 }
 
 
