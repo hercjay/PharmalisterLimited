@@ -78,6 +78,8 @@ h2 > span {
   background: var(--card-color);
   margin: 4px;
   border-radius: 5px;
+  border: 12px solid var(--border-color);
+
 }
 
 .myCard > h2 {
@@ -137,6 +139,26 @@ h2 > span {
   background: white;
   padding: 40px 30px;
   border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.noBg {
+  background: transparent !important;
+}
+
+.noBorder {
+  border: none !important;
+}
+
+.blackBtn {
+  border-color: black;
+  color: black;
+}
+
+.elevatedSpan{
+  color: inherit !important;
+  font-size: 50%;
+  vertical-align: super;
 }
 
 .mySection .myImage {
@@ -144,6 +166,12 @@ h2 > span {
   border: 5px solid white;
   box-shadow: #e6e6e6 0px 0px 10px 8px;
   transform: rotate(-2deg);
+  transition: all 0.3s linear;
+}
+
+.mySection .myImage:hover {
+  transform: rotate(0deg);
+  box-shadow: #e6e6e6 0px 0px 20px 10px;
 }
 
 .mySection .title {
@@ -779,6 +807,10 @@ h6 {
   .mySection h1 {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  .mySection .container {
+    border: none;
   }
 
   .mySection .subheading {
