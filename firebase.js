@@ -14,7 +14,8 @@ const firebaseConfig = {
 // Initialize Firebase app
 firebase.initializeApp(firebaseConfig);
 const firestore = firebase.firestore();
-const formsDb = firestore.collection("forms");
+const formsDb = firestore.collection('forms');
+const healthsentaFormsDb = firestore.collection('healthsentaForms');
 
 
 //extract form data
@@ -59,18 +60,20 @@ if(submitBtn) {
 // Function to add a document to Firestore
 const addDocumentToFirestore = (data) => {
   showLoader();
-   return formsDb.doc(data.date).set(data)
-    .then(() => {
-      console.log('Document successfully written!');
-      hideLoader();
-      clearForm();
-      return true;
-    })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-      hideLoader();
-      throw error;
-    });
+   if(formsDb) {
+      return formsDb.doc(data.date).set(data)
+      .then(() => {
+        console.log('Document successfully written!');
+        hideLoader();
+        clearForm();
+        return true;
+      })
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+        hideLoader();
+        throw error;
+      });
+   }
 };
 
 
@@ -113,10 +116,11 @@ if(loginBtn) {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         document.getElementById('loginEmail').value = '';
         document.getElementById('loginPassword').value = '';
         document.getElementById('loginForm').style.display = 'none';
+        
         displayFormsData();
       })
       .catch((error) => {
@@ -149,13 +153,13 @@ const displayFormsData = () => {
       querySnapshot.forEach((doc) => {
         // Create a new div element
         const div = document.createElement('div');
-        div.classList.add('m-4', 'p-4', 'shadow', 'bg-darker', 'border', 'border-warning');
+        div.classList.add('m-4', 'p-4', 'shadow', 'bg-light', 'border', 'rounded', 'text-dark');
 
         let date = new Date(doc.data().date);
 
         // Create the inner HTML content for the div
         div.innerHTML = `
-          <h2><span>${count}. </span>${doc.data().name}</h2> <br/>
+          <h2 class="text-dark">${count}. ${doc.data().name}</h2> <br/>
           <p>Date: ${date.toLocaleString('en-US', options)}</p>
           <p>Email: <a href="mailto:${doc.data().email}">${doc.data().email}</a></p>
           <p>Phone: <a href="tel:${doc.data().phone}">${doc.data().phone}</a></p>
@@ -166,6 +170,11 @@ const displayFormsData = () => {
         // Append the div to the table div
         tableDiv.appendChild(div);
         count++;
+        //display the accordion
+        let accordion = document.getElementById('dataDivAccordion');
+        if(accordion) {
+          accordion.classList.remove('hide');
+        }
       });
       hideLoader();
     })
@@ -173,6 +182,126 @@ const displayFormsData = () => {
       hideLoader();
       console.log('Error getting documents: ', error);
     });
+
+
+    //do same for healthsenta forms
+    healthsentaFormsDb
+    .orderBy('date', 'desc')
+    .get()
+      .then((querySnapshot) => {
+        let tableDiv = document.getElementById('healthsentaDataDiv');
+        let count = 1;
+
+        querySnapshot.forEach((doc) => {
+          const div = document.createElement('div');
+          div.classList.add('m-4', 'p-4', 'shadow', 'bg-light', 'border', 'rounded', 'text-dark');
+
+          let date = new Date(doc.data().date);
+
+          // Create the inner HTML content for the div
+          div.innerHTML = `
+            <h2 class="text-dark">${count}. ${doc.data().fullName}</h2> <br/>
+            <p>Date: ${date.toLocaleString('en-US', options)}</p>
+            <p>Email: <a href="mailto:${doc.data().email}">${doc.data().email}</a></p>
+            <p>Phone: <a href="tel:${doc.data().phone}">${doc.data().phone}</a></p>
+            <p>Category: ${doc.data().category}</p>
+            <p><span>Organization: </span>${doc.data().organization}</p>
+            <p><span>Interest: </span>${doc.data().interest}</p>
+          `;
+
+          // Append the div to the table div
+          tableDiv.appendChild(div);
+          count++;
+
+          //display the accordion
+        let accordion = document.getElementById('healthsentaAccordion');
+        if(accordion) {
+          accordion.classList.remove('hide');
+        }
+        });
+      })
+      .catch((error) => {
+        hideLoader();
+        console.log('Error getting documents: ', error);
+      });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Healthsenta Early Access Form
+
+let healthsentaForm = document.getElementById('healthsenta-form');
+const healthsentaFormDiv = document.getElementById('healthsenta-form-div');
+const healthsentaFormSuccess= document.getElementById('healthsenta-form-success');
+
+if (healthsentaForm) {
+  healthsentaForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let fullName = document.getElementById('full-name').value;
+    let emailAddress = document.getElementById('email-address').value;
+    let phoneNumber = document.getElementById('phone-number').value;
+    let category = document.getElementById('category').value;
+    let organizationName = document.getElementById('organization-name').value;
+    let interest = document.getElementById('interest').value;
+
+    if (fullName === '' || emailAddress === '' || category === '') {
+      alert('Please fill all required fields');
+      return;
+    }
+
+    let data = {
+      fullName: fullName,
+      email: emailAddress,
+      phone: phoneNumber ?? '',
+      category: category,
+      organization: organizationName ?? '',
+      interest: interest ?? '',
+      date: new Date().toISOString(),
+    };
+
+    showLoader();
+
+    firestore.collection("healthsentaForms").doc(data.date).set(data)
+      .then(() => {
+        healthsentaForm.reset();
+        healthsentaFormDiv.style.display = 'none';
+        healthsentaFormSuccess.classList.remove('hide');
+        hideLoader();
+      })
+      .catch((error) => {
+        console.error('Error submitting form: ', error);
+        alert('There was an error while submitting the form. Please check your connection or try again later.');
+        hideLoader();
+      });
+  });
 }
 
 
