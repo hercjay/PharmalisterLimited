@@ -109,6 +109,13 @@ h2 > span {
   width: fit-content;
 }
 
+.navbar > ul > li > a:hover {
+  color: var(--primary-color-light) !important;
+  border-bottom: 1px solid var(--primary-color-light) !important;
+  background-color: white !important;
+  /* width: fit-content; */
+}
+
 
 .outlineBtn {
   background: transparent;
