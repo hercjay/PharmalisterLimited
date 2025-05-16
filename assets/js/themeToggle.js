@@ -6,6 +6,9 @@ const themeToggleLabel = document.getElementById('themeToggleLabel');
 const themeStylesheet = document.getElementById('theme-stylesheet');
 const themeToggleModeText = document.getElementById('themeToggleModeText');
 
+//set current year in footer
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
 
 // function setThemeMode() {
 //     //check if themeMode is set in localStorage, if not, set it to the user's preferred theme mode

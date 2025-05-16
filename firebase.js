@@ -267,6 +267,7 @@ if (healthsentaForm) {
 
     let fullName = document.getElementById('full-name').value;
     let emailAddress = document.getElementById('email-address').value;
+    let countryCode = document.getElementById('country-code').value;
     let phoneNumber = document.getElementById('phone-number').value;
     let category = document.getElementById('category').value;
     let organizationName = document.getElementById('organization-name').value;
@@ -277,12 +278,17 @@ if (healthsentaForm) {
       return;
     }
 
+   let formattedPhoneNumber = phoneNumber;
+    if (countryCode && phoneNumber.startsWith('0')) {
+      formattedPhoneNumber = phoneNumber.substring(1);
+    }
+    let phone = countryCode && phoneNumber ? `${countryCode}${formattedPhoneNumber}` : (phoneNumber ?? '');
+
     let data = {
       fullName: fullName,
       email: emailAddress,
-      phone: phoneNumber ?? '',
+      phone: phone,
       category: category,
-      organization: organizationName ?? '',
       interest: interest ?? '',
       date: new Date().toISOString(),
     };
